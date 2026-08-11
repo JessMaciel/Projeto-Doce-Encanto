@@ -18,7 +18,7 @@
       <nav>
         <img class="logo" src="Logo.png" alt="Doce Encanto" />
 
-        <ul class="menuMeio">
+        <ul class="menuMeio" id="menuLinks">
           <li><a href="#">Início</a></li>
           <li><a href="#">Meu Perfil</a></li>
         </ul>
@@ -37,9 +37,9 @@
               ><span class="material-symbols-outlined"> notifications </span></a
             >
           </li>
-
-          <li class="iconeMoedas">
-            <a href="#"
+          <!-- Botão de telefone -->
+          <li class="iconeMoedas itemHamburguer">
+            <a href="#" id="btnMenu"
               ><span class="material-symbols-outlined"> menu </span></a
             >
           </li>
@@ -101,234 +101,153 @@
         </div>
 
         <a href="#"
-          ><span class="material-symbols-outlined">
-filter_list
-</span>
+          ><span class="material-symbols-outlined"> filter_list </span></a
+        >
       </form>
     </nav>
-
     <!-- FIM submenu -->
- <!-- main -->
 
- <main class="produtos">
-  <h2>Produtos</h2>
-  <section>
+    <!-- main -->
+    <main class="produtos">
+      <h2>Produtos</h2>
+      <section>
+        <!-- produto 1 -->
+        <article>
+          <div class="produtoStyle" id="primeiroProduto">
+            <div class="iconImg"><span class="material-symbols-outlined"> masked_transitions </span> <span>5</span></div>
+            <div class="produtosP"><p><strong>APENAS R$ 19,99</strong></p></div>
+          </div>
+          <div class="nomeProduto">
+            <h3>Bolo trufado de morango</h3>
+            <p><strong>O mais pedido</strong></p>
+          </div>
+        </article>
 
-    <!-- produto 1 -->
-<article>
-  <div class="produtoStyle" id="primeiroProduto">
-    <div class="iconImg"><span class="material-symbols-outlined">
-masked_transitions
-</span> <span>5</span></div>
+        <!-- produto 2 -->
+        <article>
+          <div class="produtoStyle" id="segundoProduto">
+            <div class="iconImg"><span class="material-symbols-outlined"> masked_transitions </span> <span>8</span></div>
+            <div class="produtosP"><p>APENAS R$ 22,99</p></div>
+          </div>
+          <div class="nomeProduto">
+            <h3>Bolo Triplo Chocolate</h3>
+            <p>Bem Chocolatudo</p>
+          </div>
+        </article>
 
-<div class="produtosP"><p><strong>APENAS R$ 19,99</strong></p></div>
-  </div>
-  
+        <!-- produto 3 -->
+        <article>
+          <div class="produtoStyle" id="terceiroProduto">
+            <div class="iconImg"><span class="material-symbols-outlined"> masked_transitions </span> <span>5</span></div>
+            <div class="produtosP"><p><strong>APENAS R$ 19,99</strong></p></div>
+          </div>
+          <div class="nomeProduto">
+            <h3>Bolo trufado de morango</h3>
+            <p>O mais pedido</p>
+          </div>
+        </article>
 
-  <div class="nomeProduto">
-<h3>Bolo trufado de morango</h3>
-<p><strong>O mais pedido</strong></p>
+        <!-- produto 4 -->
+        <article>
+          <div class="produtoStyle" id="quartoProduto">
+            <div class="iconImg"><span class="material-symbols-outlined"> masked_transitions </span> <span>5</span></div>
+            <div class="produtosP"><p>APENAS R$ 19,99</p></div>
+          </div>
+          <div class="nomeProduto">
+            <h3>Bolo trufado de morango</h3>
+            <p>O mais pedido</p>
+          </div>
+        </article>
 
-  </div>
+        <!-- produto 5 -->
+        <article>
+          <div class="produtoStyle" id="quintoProduto">
+            <div class="iconImg"><span class="material-symbols-outlined"> masked_transitions </span> <span>5</span></div>
+            <div class="produtosP"><p>APENAS R$ 19,99</p></div>
+          </div>
+          <div class="nomeProduto">
+            <h3>Bolo trufado de morango</h3>
+            <p>O mais pedido</p>
+          </div>
+        </article>
+      </section>
+    </main>
 
+    <section class="promocoes">
+      <h2>Promoções</h2>
+      <div>
+        <!-- promoção 1 -->
+        <article class="promos">
+          <div class="promosDiv">
+            <div>
+              <span class="iconpromo material-symbols-outlined"> percent_discount </span>
+              <div class="spanpromo"><span>50%</span></div>
+            </div>
+            <img src="promo1.png" alt="Promos">
+          </div>
+          <div class="promoInfo">
+            <h3>Hora do Almoço</h3>
+            <h6>50% de desconto para pedidos </h6>
+            <h5>Entre 11:30 e 14:30</h5>
+          </div>
+        </article>
 
-</article>
+        <!-- promoção 2 -->
+        <article class="promos">
+          <div class="promosDiv">
+            <div>
+              <span class="iconpromo material-symbols-outlined"> payments </span>
+              <div class="spanpromo"><span>2 por 1</span></div>
+            </div>
+            <img src="promo2.png" alt="Promos">
+          </div>
+          <div class="promoInfo">
+            <h3>Em Dobro nas Terças</h3>
+            <h6>Compre 1 Leve 2 </h6>
+          </div>
+        </article>
 
-<!-- FIM produto 1 -->
- <!-- produto 2 -->
+        <!-- promoção 3 -->
+        <article class="promos">
+          <div class="promosDiv">
+            <div>
+              <span class="iconpromo material-symbols-outlined"> payments </span>
+              <div class="spanpromo"><span>30%</span></div>
+            </div>
+            <img src="promo3.png" alt="Promos">
+          </div>
+          <div class="promoInfo">
+            <h3>Presenteie um Amigo</h3>
+            <h6>30% de desconto para Gift Cards</h6>
+          </div>
+        </article>
 
-<article>
-  <div class="produtoStyle" id="segundoProduto">
-    <div class="iconImg"><span class="material-symbols-outlined">
-masked_transitions
-</span> <span>8</span></div>
+        <!-- promoção 4 -->
+        <article class="promos">
+          <div class="promosDiv">
+            <div>
+              <span class="iconpromo material-symbols-outlined"> payments </span>
+            </div>
+            <img src="promo4.png" alt="Promos">
+          </div>
+          <div class="promoInfo">
+            <h3>Sorteio Toda Quinta</h3>
+            <h6>Mais de 50 opções</h6>
+          </div>
+        </article>
+      </div>
+    </section>
 
-<div class="produtosP"><p>APENAS R$ 22,99</p></div>
-  </div>
-  
+    <footer><img src="banner.jpg" alt="" width="100%"></footer>
 
-  <div class="nomeProduto">
-<h3>Bolo Triplo 
-Chocolate</h3>
-<p>Bem Chocolatudo</p>
+    <script>
+      const btnMenu = document.getElementById('btnMenu');
+      const menuLinks = document.getElementById('menuLinks');
 
-  </div>
-
-
-</article>
-<!-- FIM produto 2 -->
-
-
- <!-- produto 3 -->
-
-<article>
-  <div class="produtoStyle" id="terceiroProduto">
-    <div class="iconImg"><span class="material-symbols-outlined">
-masked_transitions
-</span> <span>5</span></div>
-
-<div class="produtosP"><p><strong>APENAS R$ 19,99</strong></p></div>
-  </div>
-  
-
-  <div class="nomeProduto">
-<h3>Bolo trufado de morango</h3>
-<p>O mais pedido</p>
-
-  </div>
-
-
-</article>
-<!-- FIM produto 3 -->
-  <!-- produto 4 -->
-
-<article>
-  <div class="produtoStyle" id="quartoProduto">
-    <div class="iconImg"><span class="material-symbols-outlined">
-masked_transitions
-</span> <span>5</span></div>
-
-<div class="produtosP"><p>APENAS R$ 19,99</p></div>
-  </div>
-  
-
-  <div class="nomeProduto">
-<h3>Bolo trufado de morango</h3>
-<p>O mais pedido</p>
-
-  </div>
-
-
-</article>
-<!-- FIM produto 4 -->
-  <!-- produto 5 -->
-
-<article>
-  <div class="produtoStyle" id="quintoProduto">
-    <div class="iconImg"><span class="material-symbols-outlined">
-masked_transitions
-</span> <span>5</span></div>
-
-<div class="produtosP"><p>APENAS R$ 19,99</p></div>
-  </div>
-  
-
-  <div class="nomeProduto">
-<h3>Bolo trufado de morango</h3>
-<p>O mais pedido</p>
-
-  </div>
-
-
-</article>
-<!-- FIM produto 5 -->
- 
-</section>
-
- </main>
-
-
- <section class="promocoes">
-
-
-  <h2>Promoções</h2>
-  <div>
-   <!-- promoção 1 -->
-<article class="promos">
-
-   <div class="promosDiv">
-    <div>
-    
-<span class="iconpromo material-symbols-outlined"> percent_discount </span>
-<div class="spanpromo"><span >50%</span></div>
-</div>
-<img src="promo1.png" alt="Promos">
-
-</div>
-<div class="promoInfo">
-<h3>Hora do Almoço</h3>
-<h6>50% de desconto para pedidos </h6>
-<h5>Entre 11:30 e 14:30</h5>
-
-</div>
-</article>
-<!-- FIM promoção 1 -->
-
- <!-- promoção 2 -->
-<article class="promos">
-
-   <div class="promosDiv">
-    <div>
-    
-<span class="iconpromo material-symbols-outlined">
-payments
-</span>
-<div class="spanpromo"><span >2 
-por 1</span></div>
-</div>
-<img src="promo2.png" alt="Promos">
-
-</div>
-<div class="promoInfo">
-<h3>Em Dobro nas Terças</h3>
-<h6>Compre 1 Leve 2 </h6>
-
-
-</div>
-</article>
-<!-- FIM promoção 2 -->
-
- <!-- promoção 3 -->
-<article class="promos">
-
-   <div class="promosDiv">
-    <div>
-    
-<span class="iconpromo material-symbols-outlined">
-payments
-</span>
-<div class="spanpromo"><span >30%</span></div>
-</div>
-<img src="promo3.png" alt="Promos">
-
-</div>
-<div class="promoInfo">
-<h3>Presenteie um Amigo</h3>
-<h6>30% de desconto para Gift Cards</h6>
-
-
-</div>
-</article>
-<!-- FIM promoção 3 -->
-
- <!-- promoção 4 -->
-<article class="promos">
-
-   <div class="promosDiv">
-    <div>
-    
-<span class="iconpromo material-symbols-outlined">
-payments
-</span>
-
-</div>
-<img src="promo4.png" alt="Promos">
-
-</div>
-<div class="promoInfo">
-<h3>Sorteio Toda Quinta</h3>
-<h6>Mais de 50 opções</h6>
-
-
-</div>
-</article>
-<!-- FIM promoção 4 -->
- </section>
-
-</div>
-
-
-
-<footer><img src="banner.jpg" alt="" width="100%"></footer>
+      btnMenu.addEventListener('click', function(evento) {
+        evento.preventDefault(); 
+        menuLinks.classList.toggle('ativo'); 
+      });
+    </script>
   </body>
 </html>
