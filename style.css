@@ -17,7 +17,6 @@ body {
   color: #34170c;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
   font-style: normal;
 }
 h2 {
@@ -25,11 +24,13 @@ h2 {
   margin-bottom: 9px;
   font-weight: 900;
 }
+
 /* MENU PRINCIPAL */
 .menuStyle nav {
   background-color: #664141;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 10px 15px;
   font-size: 18px;
 }
@@ -40,19 +41,21 @@ h2 {
 .logo {
   width: 94px;
 }
+
 /* menu meio */
 .menuMeio {
   display: flex;
   justify-content: center;
-  width: 80%;
   gap: 30px;
   align-items: center;
 }
 
-/* FIM menu meio */
+/*burger menu */
+.itemHamburguer {
+  display: none;
+}
 
 /* menu direita */
-
 .menuDireita {
   display: flex;
   justify-content: flex-end;
@@ -63,7 +66,6 @@ h2 {
 }
 .iconeMoedas a {
   background-color: #f9e3f6;
-
   padding: 12px;
   border-radius: 26px;
   display: flex;
@@ -71,8 +73,6 @@ h2 {
   align-items: center;
   gap: 8px;
 }
-/* FIM menu direita */
-/* FIM MENU PRINCIPAL */
 
 /* SUB MENU */
 .subMenu {
@@ -82,7 +82,6 @@ h2 {
   padding-right: 20px;
   align-items: center;
 }
-/* esquerda */
 
 .subMenuEsq {
   display: flex;
@@ -115,8 +114,6 @@ span {
   font-size: 34px;
 }
 
-/* FIM esquerda */
-/* direita */
 .subMenu > form > div {
   display: flex;
   align-items: center;
@@ -140,8 +137,6 @@ span {
   align-items: center;
   gap: 12px;
 }
-
-/* FIM SUBMENU */
 
 /* PRODUTOS */
 .produtos {
@@ -191,41 +186,14 @@ span {
   flex-direction: column;
   justify-content: center;
 }
-/* produto 1 */
-#primeiroProduto {
-  background-image: url(primeiroProduto.png);
-}
 
-/* FIM produto 1 */
-/* produto 2 */
-#segundoProduto {
-  background-image: url(segundoProduto.png);
-}
-
-/* FIM produto 2 */
-/* produto 3 */
-#terceiroProduto {
-  background-image: url(terceiroProduto.png);
-}
-
-/* FIM produto 3 */
-/* produto 4 */
-#quartoProduto {
-  background-image: url(quartoProduto.png);
-}
-
-/* FIM produto 4 */
-/* produto 5 */
-#quintoProduto {
-  background-image: url(quintoProduto.png);
-}
-
-/* FIM produto 5*/
-
-/* fim PRODUTOS */
+#primeiroProduto { background-image: url(primeiroProduto.png); }
+#segundoProduto { background-image: url(segundoProduto.png); }
+#terceiroProduto { background-image: url(terceiroProduto.png); }
+#quartoProduto { background-image: url(quartoProduto.png); }
+#quintoProduto { background-image: url(quintoProduto.png); }
 
 /* PROMOÇÕES */
-
 .promocoes {
   margin-left: 40px;
 }
@@ -292,10 +260,113 @@ span {
 }
 
 /* footer */
-
 footer img {
   height: 454px;
   object-fit: cover;
   object-position: top;
   margin: 35px 0;
+}
+
+/RESPONSIVO*/
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Até 992px */
+@media (max-width: 992px) {
+  .subMenu {
+    flex-direction: column;
+    gap: 20px;
+    padding-right: 0;
+  }
+
+  .subMenu > form > div {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .subMenu form {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .produtos section,
+  .promocoes > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .produtos, .promocoes {
+    margin: 20px;
+  }
+}
+
+/* Até 600px */
+@media (max-width: 600px) {
+  .menuStyle nav {
+    flex-wrap: wrap;
+  }
+
+  /* Exibe o hambúrguer no celular */
+  .itemHamburguer {
+    display: block;
+  }
+
+  /* */
+  .menuMeio {
+    display: none;
+    width: 100%;
+    order: 3;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    padding: 15px 0 5px 0;
+  }
+
+  /* */
+  .menuMeio.ativo {
+    display: flex;
+  }
+
+  .subMenuEsq {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .subMenuIcons span {
+    font-size: 12px;
+  }
+
+  .subMenuIcons div {
+    width: 45px;
+    height: 45px;
+  }
+
+  .subMenuIcons div span {
+    font-size: 26px;
+  }
+
+  .subMenu > form > div {
+    padding: 8px 12px;
+  }
+
+  .produtos h2, .promocoes h2 {
+    text-align: center;
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer img {
+    height: 250px;
+    margin: 20px 0;
+  }
 }
